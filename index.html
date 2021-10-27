@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link rel="Source Code Font" href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UFT-8">
     <title>21spaldingjan</title>
     <style>
@@ -10,7 +11,8 @@
         padding:0px;
       }
       .Greeting {
-        font-family:Source Code;
+        font-family:Source Code Pro;
+        color:white;
       } 
       nav {
         potition:fixed;
@@ -20,49 +22,52 @@
       .background {
         background:linear-gradient(to left, #2C2F33, #23272A);
       }
-      .text {
-        color:white;
-        position:relative;
-      }
       .heading {
+      	font-family:Source Code Pro;
         color:white;
         position:absolute;
-        align:center;
+        top:20%;
+        right:0;
+        left:0;
+        text-align:center;
+        margin:auto;   
+        font-size:100px;
         z-index:3;
       }
       .img1 {
         position:relative;
         height:100vh;
         width:100%;
-        transparancy:0.5;
+
       }
       .img2 {
-        position:relative;
+        position:block;
       }
-      .bar {
-        potition:absolute;
-        background:yellow;
-        /*background:linear-gradient(to left, #2C2F33, #23272A);*/
-        width:100vh;
-        height:10%;
-        z-index:2;
+      h3 {
+        text-shadow:0 1px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;
+      	animation: text-moving 1.5s infinite;
+      }
+      @keyframes text-moving {
+        0%{text-shadow:0 4px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;}
+        25%{text-shadow:0 1px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -4px 0 1px #000;}
+        50%{text-shadow:0 1px 1px #000, 0 -4px 1px #000, 1px 0 1px #000, -1px 0 1px #000;}
+        75%{text-shadow:0 1px 1px #000, 0 -1px 1px #000, 4px 0 1px #000, -1px 0 1px #000;}
+        100%{text-shadow:0 4px 1px #000, 0 -1px 1px #000, 1px 0 1px #000, -1px 0 1px #000;}
       }
     </style>
   </head>
   <body>
     <div class="background">
-      <div class="bar">
+      <div> <!-- First image -->	
+  	  	<img class="img1" src="https://media.discordapp.net/attachments/902651170995187745/902890355333136434/ea017af7ef7e5961394ab6d548c80b5b.jpeg">
       </div>
-      <nav>
-        <img class="img1" src="https://media.discordapp.net/attachments/902651170995187745/902890355333136434/ea017af7ef7e5961394ab6d548c80b5b.jpeg" width="100%" height="100%">
-        <h3 class="heading">21spaldingjan</h3>
-      </nav>
-      <section>
-        <div>
-          <img class="img2"src="https://media.discordapp.net/attachments/902651170995187745/902881286417420318/Marus_Aurelius.jpg">
-          <p class="Greeting text">Hello I am here to greet you on this wonderful day</p>
-        </div>
-      </section>
+  	  <div class="heading">
+      	<h3 class="animation1">Hello there<br>and<br>Welcome</h3>
+      </div>
+  	  <div>
+  	    <img class="img2"src="https://media.discordapp.net/attachments/902651170995187745/902881286417420318/Marus_Aurelius.jpg">
+        <p class="Greeting text">Hello I am here to greet you on this wonderful day</p>
+      </div>
     </div>
   </body>
 </html>
